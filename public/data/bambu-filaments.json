@@ -1,0 +1,1858 @@
+{
+  "schemaVersion": 3,
+  "manufacturer": "Bambu Lab",
+  "verifiedAt": "2026-08-31",
+  "series": [
+    {
+      "id": "pla-basic",
+      "name": "PLA Basic",
+      "material": "PLA",
+      "settings": {
+        "nozzleMin": 190,
+        "nozzleMax": 230,
+        "bedMin": 35,
+        "bedMax": 45,
+        "speed": 300,
+        "fan": 100,
+        "dryingTemperature": 55,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "jade-white",
+          "name": "Jade White",
+          "colorCode": "10100",
+          "hexes": ["#F5F5F1"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "black",
+          "name": "Black",
+          "colorCode": "10101",
+          "hexes": ["#000000"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "gray",
+          "name": "Gray",
+          "colorCode": "10103",
+          "hexes": ["#8E9089"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "red",
+          "name": "Red",
+          "colorCode": "10200",
+          "hexes": ["#C12E1F"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "orange",
+          "name": "Orange",
+          "colorCode": "10300",
+          "hexes": ["#FF6A13"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "pumpkin-orange",
+          "name": "Pumpkin Orange",
+          "colorCode": "10301",
+          "hexes": ["#FF9016"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "blue-gray",
+          "name": "Blue Gray",
+          "colorCode": "10602",
+          "hexes": ["#5B6579"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "cobalt-blue",
+          "name": "Cobalt Blue",
+          "colorCode": "10604",
+          "hexes": ["#0056B8"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "turquoise",
+          "name": "Turquoise",
+          "colorCode": "10605",
+          "hexes": ["#00B1B7"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "cyan",
+          "name": "Cyan",
+          "colorCode": "10603",
+          "hexes": ["#0086D6"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "blue",
+          "name": "Blue",
+          "colorCode": "10601",
+          "hexes": ["#0A2989"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "silver",
+          "name": "Silver",
+          "colorCode": "10102",
+          "hexes": ["#A6A9AA"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "light-gray",
+          "name": "Light Gray",
+          "colorCode": "10104",
+          "hexes": ["#D1D3D5"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "dark-gray",
+          "name": "Dark Gray",
+          "colorCode": "10105",
+          "hexes": ["#545454"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "mistletoe-green",
+          "name": "Mistletoe Green",
+          "colorCode": "10502",
+          "hexes": ["#3F8E43"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "bright-green",
+          "name": "Bright Green",
+          "colorCode": "10503",
+          "hexes": ["#BECF00"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "bambu-green",
+          "name": "Bambu Green",
+          "colorCode": "10501",
+          "hexes": ["#00AE42"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "brown",
+          "name": "Brown",
+          "colorCode": "10800",
+          "hexes": ["#9D432C"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "cocoa-brown",
+          "name": "Cocoa Brown",
+          "colorCode": "10802",
+          "hexes": ["#6F5034"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "beige",
+          "name": "Beige",
+          "colorCode": "10201",
+          "hexes": ["#F7E6DE"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "pink",
+          "name": "Pink",
+          "colorCode": "10203",
+          "hexes": ["#F55A74"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "indigo-purple",
+          "name": "Indigo Purple",
+          "colorCode": "10701",
+          "hexes": ["#482960"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "purple",
+          "name": "Purple",
+          "colorCode": "10700",
+          "hexes": ["#5E43B7"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "magenta",
+          "name": "Magenta",
+          "colorCode": "10202",
+          "hexes": ["#EC008C"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "maroon-red",
+          "name": "Maroon Red",
+          "colorCode": "10205",
+          "hexes": ["#9D2235"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "hot-pink",
+          "name": "Hot Pink",
+          "colorCode": "10204",
+          "hexes": ["#F5547C"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "yellow",
+          "name": "Yellow",
+          "colorCode": "10400",
+          "hexes": ["#F4EE2A"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "sunflower-yellow",
+          "name": "Sunflower Yellow",
+          "colorCode": "10402",
+          "hexes": ["#FEC600"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "bronze",
+          "name": "Bronze",
+          "colorCode": "10801",
+          "hexes": ["#847D48"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "gold",
+          "name": "Gold",
+          "colorCode": "10401",
+          "hexes": ["#E4BD68"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab PLA Basic",
+          "url": "https://uk.store.bambulab.com/en/products/pla-basic-filament"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "pla-lite",
+      "name": "PLA Lite",
+      "material": "PLA",
+      "settings": {
+        "nozzleMin": 210,
+        "nozzleMax": 220,
+        "bedMin": 35,
+        "bedMax": 65,
+        "speed": 250,
+        "fan": 80,
+        "dryingTemperature": 45,
+        "dryingHours": 12
+      },
+      "colors": [
+        {
+          "id": "black",
+          "name": "Black",
+          "colorCode": "16100",
+          "hexes": ["#000000"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "yellow",
+          "name": "Yellow",
+          "colorCode": "16400",
+          "hexes": ["#EFE255"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "white",
+          "name": "White",
+          "colorCode": "16103",
+          "hexes": ["#FFFFFF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "cyan",
+          "name": "Cyan",
+          "colorCode": "16600",
+          "hexes": ["#4DAFDA"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "red",
+          "name": "Red",
+          "colorCode": "16200",
+          "hexes": ["#C6001A"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "gray",
+          "name": "Gray",
+          "colorCode": "16101",
+          "hexes": ["#999D9D"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "blue",
+          "name": "Blue",
+          "colorCode": "16601",
+          "hexes": ["#004EA8"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "sunflower-yellow",
+          "name": "Sunflower Yellow",
+          "colorCode": "16401",
+          "hexes": ["#FFB549"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "green",
+          "name": "Green",
+          "colorCode": "16501",
+          "hexes": ["#00BB31"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "orange",
+          "name": "Orange",
+          "colorCode": "16301",
+          "hexes": ["#FF671F"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "matte-beige",
+          "name": "Matte Beige",
+          "colorCode": "16700",
+          "hexes": ["#ECC3B2"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "cocoa-brown",
+          "name": "Cocoa Brown",
+          "colorCode": "16800",
+          "hexes": ["#745335"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "dark-gray",
+          "name": "Dark Gray",
+          "colorCode": "16102",
+          "hexes": ["#8C8B8C"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Studio — PLA Lite profile",
+          "url": "https://github.com/bambulab/BambuStudio/tree/master/resources/profiles/BBL/filament"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "pla-matte",
+      "name": "PLA Matte",
+      "material": "PLA",
+      "settings": {
+        "nozzleMin": 190,
+        "nozzleMax": 230,
+        "bedMin": 35,
+        "bedMax": 45,
+        "speed": 250,
+        "fan": 100,
+        "dryingTemperature": 55,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "charcoal",
+          "name": "Charcoal",
+          "colorCode": "11101",
+          "hexes": ["#3A3A3C"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "ivory-white",
+          "name": "Ivory White",
+          "colorCode": "11100",
+          "hexes": ["#FFFFFF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "marine-blue",
+          "name": "Marine Blue",
+          "colorCode": "11600",
+          "hexes": ["#0078BF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "scarlet-red",
+          "name": "Scarlet Red",
+          "colorCode": "11200",
+          "hexes": ["#DE4343"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "mandarin-orange",
+          "name": "Mandarin Orange",
+          "colorCode": "11300",
+          "hexes": ["#F99963"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "sky-blue",
+          "name": "Sky Blue",
+          "colorCode": "11603",
+          "hexes": ["#56B7E6"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "ice-blue",
+          "name": "Ice Blue",
+          "colorCode": "11601",
+          "hexes": ["#A3D8E1"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "dark-blue",
+          "name": "Dark Blue",
+          "colorCode": "11602",
+          "hexes": ["#042F56"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "nardo-gray",
+          "name": "Nardo Gray",
+          "colorCode": "11104",
+          "hexes": ["#757575"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "ash-gray",
+          "name": "Ash Gray",
+          "colorCode": "11102",
+          "hexes": ["#9B9EA0"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "apple-green",
+          "name": "Apple Green",
+          "colorCode": "11502",
+          "hexes": ["#C2E189"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "grass-green",
+          "name": "Grass Green",
+          "colorCode": "11500",
+          "hexes": ["#61C680"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "dark-green",
+          "name": "Dark Green",
+          "colorCode": "11501",
+          "hexes": ["#68724D"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "dark-chocolate",
+          "name": "Dark Chocolate",
+          "colorCode": "11802",
+          "hexes": ["#4D3324"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "latte-brown",
+          "name": "Latte Brown",
+          "colorCode": "11800",
+          "hexes": ["#D3B7A7"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "dark-brown",
+          "name": "Dark Brown",
+          "colorCode": "11801",
+          "hexes": ["#7D6556"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "caramel",
+          "name": "Caramel",
+          "colorCode": "11803",
+          "hexes": ["#AE835B"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "sakura-pink",
+          "name": "Sakura Pink",
+          "colorCode": "11201",
+          "hexes": ["#E8AFCF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "lilac-purple",
+          "name": "Lilac Purple",
+          "colorCode": "11700",
+          "hexes": ["#AE96D4"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "terracotta",
+          "name": "Terracotta",
+          "colorCode": "11203",
+          "hexes": ["#B15533"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "plum",
+          "name": "Plum",
+          "colorCode": "11204",
+          "hexes": ["#950051"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "dark-red",
+          "name": "Dark Red",
+          "colorCode": "11202",
+          "hexes": ["#BB3D43"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "bone-white",
+          "name": "Bone White",
+          "colorCode": "11103",
+          "hexes": ["#CBC6B8"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "lemon-yellow",
+          "name": "Lemon Yellow",
+          "colorCode": "11400",
+          "hexes": ["#F7D959"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "desert-tan",
+          "name": "Desert Tan",
+          "colorCode": "11401",
+          "hexes": ["#E8DBB7"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Studio — PLA Matte profile",
+          "url": "https://github.com/bambulab/BambuStudio/tree/master/resources/profiles/BBL/filament"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "pla-basic-gradient",
+      "name": "PLA Basic Gradient",
+      "material": "PLA",
+      "settings": {
+        "nozzleMin": 190,
+        "nozzleMax": 230,
+        "bedMin": 35,
+        "bedMax": 45,
+        "speed": 300,
+        "fan": 100,
+        "dryingTemperature": 55,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "arctic-whisper",
+          "name": "Arctic Whisper",
+          "colorCode": "10900",
+          "hexes": ["#9CDBD9", "#FFFFFF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "solar-breeze",
+          "name": "Solar Breeze",
+          "colorCode": "10901",
+          "hexes": ["#E94B3C", "#FFFFFF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "ocean-to-meadow",
+          "name": "Ocean to Meadow",
+          "colorCode": "10902",
+          "hexes": ["#307FE2", "#54FF9B"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "cotton-candy-cloud",
+          "name": "Cotton Candy Cloud",
+          "colorCode": "10907",
+          "hexes": ["#E7C1D5", "#8EC9E9"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "blueberry-bubblegum",
+          "name": "Blueberry Bubblegum",
+          "colorCode": "10905",
+          "hexes": ["#6FCAEF", "#8573DD"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "mint-lime",
+          "name": "Mint Lime",
+          "colorCode": "10904",
+          "hexes": ["#B6FF43", "#4EC939"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "pink-citrus",
+          "name": "Pink Citrus",
+          "colorCode": "10903",
+          "hexes": ["#F78F77", "#E4505A"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "dusk-glare",
+          "name": "Dusk Glare",
+          "colorCode": "10906",
+          "hexes": ["#ED9558", "#CE4406"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab PLA Basic Gradient",
+          "url": "https://eu.store.bambulab.com/en-ch/products/pla-basic-gradient"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "pla-metal",
+      "name": "PLA Metal",
+      "material": "PLA",
+      "settings": {
+        "nozzleMin": 190,
+        "nozzleMax": 230,
+        "bedMin": 35,
+        "bedMax": 45,
+        "speed": 300,
+        "fan": 100,
+        "dryingTemperature": 55,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "iridium-gold-metallic",
+          "name": "Iridium Gold Metallic",
+          "colorCode": "13400",
+          "hexes": ["#B39B84"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "copper-brown-metallic",
+          "name": "Copper Brown Metallic",
+          "colorCode": "13800",
+          "hexes": ["#AA6443"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "oxide-green-metallic",
+          "name": "Oxide Green Metallic",
+          "colorCode": "13500",
+          "hexes": ["#1D7C6A"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "cobalt-blue-metallic",
+          "name": "Cobalt Blue Metallic",
+          "colorCode": "13600",
+          "hexes": ["#39699E"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "iron-gray-metallic",
+          "name": "Iron Gray Metallic",
+          "colorCode": "13100",
+          "hexes": ["#43403D"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab PLA Metal",
+          "url": "https://eu.store.bambulab.com/en/collections/pla/products/pla-metal"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "pla-silk",
+      "name": "PLA Silk+",
+      "material": "PLA",
+      "settings": {
+        "nozzleMin": 210,
+        "nozzleMax": 240,
+        "bedMin": 35,
+        "bedMax": 45,
+        "speed": 250,
+        "fan": 100,
+        "dryingTemperature": 55,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "gold",
+          "name": "Gold",
+          "colorCode": "13405",
+          "hexes": ["#F4A925"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "silver",
+          "name": "Silver",
+          "colorCode": "13109",
+          "hexes": ["#C8C8C8"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "titan-gray",
+          "name": "Titan Gray",
+          "colorCode": "13108",
+          "hexes": ["#5F6367"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "blue",
+          "name": "Blue",
+          "colorCode": "13604",
+          "hexes": ["#008BDA"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "purple",
+          "name": "Purple",
+          "colorCode": "13702",
+          "hexes": ["#8671CB"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "candy-red",
+          "name": "Candy Red",
+          "colorCode": "13205",
+          "hexes": ["#D02727"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "candy-green",
+          "name": "Candy Green",
+          "colorCode": "13506",
+          "hexes": ["#018814"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "rose-gold",
+          "name": "Rose Gold",
+          "colorCode": "13206",
+          "hexes": ["#BA9594"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "baby-blue",
+          "name": "Baby Blue",
+          "colorCode": "13603",
+          "hexes": ["#A8C6EE"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "pink",
+          "name": "Pink",
+          "colorCode": "13207",
+          "hexes": ["#F7ADA6"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "mint",
+          "name": "Mint",
+          "colorCode": "13507",
+          "hexes": ["#96DCB9"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "champagne",
+          "name": "Champagne",
+          "colorCode": "13404",
+          "hexes": ["#F3CFB2"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "white",
+          "name": "White",
+          "colorCode": "13110",
+          "hexes": ["#FFFFFF"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab PLA Silk+",
+          "url": "https://eu.store.bambulab.com/products/pla-silk-upgrade"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "pla-wood",
+      "name": "PLA Wood",
+      "material": "PLA",
+      "settings": {
+        "nozzleMin": 190,
+        "nozzleMax": 240,
+        "bedMin": 35,
+        "bedMax": 45,
+        "speed": 250,
+        "fan": 100,
+        "dryingTemperature": 55,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "black-walnut",
+          "name": "Black Walnut",
+          "colorCode": "13107",
+          "hexes": ["#4F3F24"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "rosewood",
+          "name": "Rosewood",
+          "colorCode": "13204",
+          "hexes": ["#4C241C"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "clay-brown",
+          "name": "Clay Brown",
+          "colorCode": "13801",
+          "hexes": ["#995F11"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "classic-birch",
+          "name": "Classic Birch",
+          "colorCode": "13505",
+          "hexes": ["#918669"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "white-oak",
+          "name": "White Oak",
+          "colorCode": "13106",
+          "hexes": ["#D6CCA3"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "ochre-yellow",
+          "name": "Ochre Yellow",
+          "colorCode": "13403",
+          "hexes": ["#C98935"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab PLA Wood",
+          "url": "https://eu.store.bambulab.com/fr-fr/products/pla-wood"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "petg-hf",
+      "name": "PETG HF",
+      "material": "PETG",
+      "settings": {
+        "nozzleMin": 230,
+        "nozzleMax": 260,
+        "bedMin": 65,
+        "bedMax": 75,
+        "speed": 300,
+        "fan": 90,
+        "dryingTemperature": 65,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "yellow",
+          "name": "Yellow",
+          "colorCode": "33400",
+          "hexes": ["#FFD00B"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "orange",
+          "name": "Orange",
+          "colorCode": "33300",
+          "hexes": ["#F75403"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "green",
+          "name": "Green",
+          "colorCode": "33500",
+          "hexes": ["#00AE42"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "red",
+          "name": "Red",
+          "colorCode": "33200",
+          "hexes": ["#EB3A3A"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "blue",
+          "name": "Blue",
+          "colorCode": "33600",
+          "hexes": ["#002E96"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "black",
+          "name": "Black",
+          "colorCode": "33102",
+          "hexes": ["#000000"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "white",
+          "name": "White",
+          "colorCode": "33100",
+          "hexes": ["#FFFFFF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "cream",
+          "name": "Cream",
+          "colorCode": "33401",
+          "hexes": ["#F9DFB9"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "lime-green",
+          "name": "Lime Green",
+          "colorCode": "33501",
+          "hexes": ["#6EE53C"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "forest-green",
+          "name": "Forest Green",
+          "colorCode": "33502",
+          "hexes": ["#39541A"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "lake-blue",
+          "name": "Lake Blue",
+          "colorCode": "33601",
+          "hexes": ["#1F79E5"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "peanut-brown",
+          "name": "Peanut Brown",
+          "colorCode": "33801",
+          "hexes": ["#875718"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "gray",
+          "name": "Gray",
+          "colorCode": "33101",
+          "hexes": ["#ADB1B2"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "dark-gray",
+          "name": "Dark Gray",
+          "colorCode": "33103",
+          "hexes": ["#515151"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab PETG HF",
+          "url": "https://eu.store.bambulab.com/en-lv/products/petg-hf"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "petg-translucent",
+      "name": "PETG Translucent",
+      "material": "PETG",
+      "settings": {
+        "nozzleMin": 230,
+        "nozzleMax": 260,
+        "bedMin": 65,
+        "bedMax": 75,
+        "speed": 220,
+        "fan": 70,
+        "dryingTemperature": 65,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "translucent-gray",
+          "name": "Translucent Gray",
+          "colorCode": "32100",
+          "hexes": ["#8E8E8E"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "translucent-light-blue",
+          "name": "Translucent Light Blue",
+          "colorCode": "32600",
+          "hexes": ["#61B0FF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "translucent-olive",
+          "name": "Translucent Olive",
+          "colorCode": "32500",
+          "hexes": ["#748C45"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "translucent-brown",
+          "name": "Translucent Brown",
+          "colorCode": "32800",
+          "hexes": ["#C9A381"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "translucent-teal",
+          "name": "Translucent Teal",
+          "colorCode": "32501",
+          "hexes": ["#77EDD7"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "translucent-orange",
+          "name": "Translucent Orange",
+          "colorCode": "32300",
+          "hexes": ["#FF911A"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "translucent-purple",
+          "name": "Translucent Purple",
+          "colorCode": "32700",
+          "hexes": ["#D6ABFF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "translucent-pink",
+          "name": "Translucent Pink",
+          "colorCode": "32200",
+          "hexes": ["#F9C1BD"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "clear",
+          "name": "Clear",
+          "colorCode": "32101",
+          "hexes": ["#FFFFFF"],
+          "colorAccuracy": "estimated"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab PETG Translucent",
+          "url": "https://eu.store.bambulab.com/products/petg-translucent/"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "petg-cf",
+      "name": "PETG-CF",
+      "material": "PETG",
+      "settings": {
+        "nozzleMin": 240,
+        "nozzleMax": 270,
+        "bedMin": 65,
+        "bedMax": 75,
+        "speed": 200,
+        "fan": 40,
+        "dryingTemperature": 65,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "brick-red",
+          "name": "Brick Red",
+          "colorCode": "31200",
+          "hexes": ["#9F332A"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "violet-purple",
+          "name": "Violet Purple",
+          "colorCode": "31700",
+          "hexes": ["#583061"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "indigo-blue",
+          "name": "Indigo Blue",
+          "colorCode": "31600",
+          "hexes": ["#324585"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "malachite-green",
+          "name": "Malachite Green",
+          "colorCode": "31500",
+          "hexes": ["#16B08E"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "black",
+          "name": "Black",
+          "colorCode": "31100",
+          "hexes": ["#000000"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "titan-gray",
+          "name": "Titan Gray",
+          "colorCode": "31101",
+          "hexes": ["#565656"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab PETG-CF",
+          "url": "https://eu.store.bambulab.com/en/collections/filament-refill/products/petg-cf"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "abs",
+      "name": "ABS",
+      "material": "ABS",
+      "settings": {
+        "nozzleMin": 240,
+        "nozzleMax": 270,
+        "bedMin": 80,
+        "bedMax": 100,
+        "speed": 300,
+        "fan": 20,
+        "dryingTemperature": 80,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "olive",
+          "name": "Olive",
+          "colorCode": "40502",
+          "hexes": ["#789D4A"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "tangerine-yellow",
+          "name": "Tangerine Yellow",
+          "colorCode": "40402",
+          "hexes": ["#FFC72C"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "azure",
+          "name": "Azure",
+          "colorCode": "40601",
+          "hexes": ["#489FDF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "navy-blue",
+          "name": "Navy Blue",
+          "colorCode": "40602",
+          "hexes": ["#0C2340"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "white",
+          "name": "White",
+          "colorCode": "40100",
+          "hexes": ["#FFFFFF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "silver",
+          "name": "Silver",
+          "colorCode": "40102",
+          "hexes": ["#87909A"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "red",
+          "name": "Red",
+          "colorCode": "40200",
+          "hexes": ["#D32941"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "orange",
+          "name": "Orange",
+          "colorCode": "40300",
+          "hexes": ["#FF6A13"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "bambu-green",
+          "name": "Bambu Green",
+          "colorCode": "40500",
+          "hexes": ["#00AE42"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "blue",
+          "name": "Blue",
+          "colorCode": "40600",
+          "hexes": ["#0A2CA5"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "black",
+          "name": "Black",
+          "colorCode": "40101",
+          "hexes": ["#000000"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab ABS",
+          "url": "https://eu.store.bambulab.com/en-be/products/abs-filament"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "asa",
+      "name": "ASA",
+      "material": "ASA",
+      "settings": {
+        "nozzleMin": 240,
+        "nozzleMax": 270,
+        "bedMin": 80,
+        "bedMax": 100,
+        "speed": 250,
+        "fan": 20,
+        "dryingTemperature": 80,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "white",
+          "name": "White",
+          "colorCode": "45100",
+          "hexes": ["#FFFAF2"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "gray",
+          "name": "Gray",
+          "colorCode": "45102",
+          "hexes": ["#8A949E"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "red",
+          "name": "Red",
+          "colorCode": "45200",
+          "hexes": ["#E02928"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "green",
+          "name": "Green",
+          "colorCode": "45500",
+          "hexes": ["#00A6A0"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "blue",
+          "name": "Blue",
+          "colorCode": "45600",
+          "hexes": ["#2140B4"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "black",
+          "name": "Black",
+          "colorCode": "45101",
+          "hexes": ["#000000"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab ASA",
+          "url": "https://eu.store.bambulab.com/en-hu/products/asa-filament"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "tpu-95a-hf",
+      "name": "TPU 95A HF",
+      "material": "TPU",
+      "settings": {
+        "nozzleMin": 220,
+        "nozzleMax": 240,
+        "bedMin": 30,
+        "bedMax": 35,
+        "speed": 200,
+        "fan": 80,
+        "dryingTemperature": 70,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "white",
+          "name": "White",
+          "colorCode": "51102",
+          "hexes": ["#FFFFFF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "yellow",
+          "name": "Yellow",
+          "colorCode": "51400",
+          "hexes": ["#F3E600"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "blue",
+          "name": "Blue",
+          "colorCode": "51600",
+          "hexes": ["#0072CE"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "red",
+          "name": "Red",
+          "colorCode": "51200",
+          "hexes": ["#C8102E"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "gray",
+          "name": "Gray",
+          "colorCode": "51101",
+          "hexes": ["#898D8D"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "black",
+          "name": "Black",
+          "colorCode": "51100",
+          "hexes": ["#101820"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab TPU 95A HF",
+          "url": "https://eu.store.bambulab.com/en-se/products/tpu-95a-hf"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "pc",
+      "name": "PC",
+      "material": "PC",
+      "settings": {
+        "nozzleMin": 250,
+        "nozzleMax": 280,
+        "bedMin": 90,
+        "bedMax": 110,
+        "speed": 180,
+        "fan": 20,
+        "dryingTemperature": 80,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "transparent",
+          "name": "Transparent",
+          "colorCode": "60103",
+          "hexes": ["#D8E3E5"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Studio — PC profile",
+          "url": "https://github.com/bambulab/BambuStudio/blob/master/resources/profiles/BBL/filament/Bambu%20PC%20%40base.json"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "pa6-cf",
+      "name": "PA6-CF",
+      "material": "PA",
+      "settings": {
+        "nozzleMin": 260,
+        "nozzleMax": 290,
+        "bedMin": 80,
+        "bedMax": 100,
+        "speed": 100,
+        "fan": 20,
+        "dryingTemperature": 80,
+        "dryingHours": 12
+      },
+      "colors": [
+        {
+          "id": "black",
+          "name": "Black",
+          "colorCode": "72100",
+          "hexes": ["#222222"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab PA6-CF",
+          "url": "https://eu.store.bambulab.com/it-it/products/pa6-cf"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+        }
+      }
+    },
+    {
+      "id": "petg-basic",
+      "name": "PETG Basic",
+      "material": "PETG",
+      "settings": {
+        "nozzleMin": 230,
+        "nozzleMax": 270,
+        "bedMin": 70,
+        "bedMax": 70,
+        "speed": 200,
+        "fan": 40,
+        "dryingTemperature": 65,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "black",
+          "name": "Black",
+          "colorCode": "30105",
+          "hexes": ["#000000"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "white",
+          "name": "White",
+          "colorCode": "30106",
+          "hexes": ["#FFFFFF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "gray",
+          "name": "Gray",
+          "colorCode": "30107",
+          "hexes": ["#7F7E83"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "yellow",
+          "name": "Yellow",
+          "colorCode": "30402",
+          "hexes": ["#FCE300"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "red",
+          "name": "Red",
+          "colorCode": "30201",
+          "hexes": ["#D6001C"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "reflex-blue",
+          "name": "Reflex Blue",
+          "colorCode": "30603",
+          "hexes": ["#001489"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "dark-brown",
+          "name": "Dark Brown",
+          "colorCode": "30800",
+          "hexes": ["#4F2C1D"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "green",
+          "name": "Green",
+          "colorCode": "30502",
+          "hexes": ["#009639"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "orange",
+          "name": "Orange",
+          "colorCode": "30301",
+          "hexes": ["#FF671F"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "pine-green",
+          "name": "Pine Green",
+          "colorCode": "30503",
+          "hexes": ["#034638"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "navy-blue",
+          "name": "Navy Blue",
+          "colorCode": "30604",
+          "hexes": ["#0086D6"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "misty-blue",
+          "name": "Misty Blue",
+          "colorCode": "30108",
+          "hexes": ["#688197"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "dark-beige",
+          "name": "Dark Beige",
+          "colorCode": "30403",
+          "hexes": ["#DBC8B6"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab PETG Basic",
+          "url": "https://us.store.bambulab.com/en/products/petg-basic"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20PETG%20Basic"
+        }
+      }
+    },
+    {
+      "id": "pla-pure",
+      "name": "PLA Pure",
+      "material": "PLA",
+      "settings": {
+        "nozzleMin": 190,
+        "nozzleMax": 220,
+        "bedMin": 35,
+        "bedMax": 65,
+        "speed": 300,
+        "fan": 100,
+        "dryingTemperature": 55,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "pure-white",
+          "name": "Pure White",
+          "colorCode": "17100",
+          "hexes": ["#FFFFFF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "absolute-black",
+          "name": "Absolute Black",
+          "colorCode": "17101",
+          "hexes": ["#000000"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "milky-pink",
+          "name": "Milky Pink",
+          "colorCode": "17200",
+          "hexes": ["#F7CED7"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "baby-blue",
+          "name": "Baby Blue",
+          "colorCode": "17600",
+          "hexes": ["#A4DBE8"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "apricot",
+          "name": "Apricot",
+          "colorCode": "17300",
+          "hexes": ["#FFB673"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab PLA Pure",
+          "url": "https://us.store.bambulab.com/en/products/pla-pure"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20PLA%20Pure"
+        }
+      }
+    },
+    {
+      "id": "pla-tough-plus",
+      "name": "PLA Tough+",
+      "material": "PLA",
+      "settings": {
+        "nozzleMin": 220,
+        "nozzleMax": 250,
+        "bedMin": 35,
+        "bedMax": 45,
+        "speed": 300,
+        "fan": 100,
+        "dryingTemperature": 55,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "black",
+          "name": "Black",
+          "colorCode": "12104",
+          "hexes": ["#000000"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "gray",
+          "name": "Gray",
+          "colorCode": "12105",
+          "hexes": ["#AFB1AE"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "silver",
+          "name": "Silver",
+          "colorCode": "12106",
+          "hexes": ["#959698"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "white",
+          "name": "White",
+          "colorCode": "12107",
+          "hexes": ["#FFFFFF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "orange",
+          "name": "Orange",
+          "colorCode": "12301",
+          "hexes": ["#DC3A27"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "yellow",
+          "name": "Yellow",
+          "colorCode": "12401",
+          "hexes": ["#F4D53F"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "cyan",
+          "name": "Cyan",
+          "colorCode": "12601",
+          "hexes": ["#009BD8"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab PLA Tough+",
+          "url": "https://us.store.bambulab.com/en/products/pla-tough-upgrade"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20PLA%20Tough%20Plus"
+        }
+      }
+    },
+    {
+      "id": "pla-translucent",
+      "name": "PLA Translucent",
+      "material": "PLA",
+      "settings": {
+        "nozzleMin": 200,
+        "nozzleMax": 240,
+        "bedMin": 35,
+        "bedMax": 65,
+        "speed": 150,
+        "fan": 100,
+        "dryingTemperature": 50,
+        "dryingHours": 8
+      },
+      "colors": [
+        {
+          "id": "red",
+          "name": "Red",
+          "colorCode": "13210",
+          "hexes": ["#B50011"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "cherry-pink",
+          "name": "Cherry Pink",
+          "colorCode": "13211",
+          "hexes": ["#F5B6CD"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "orange",
+          "name": "Orange",
+          "colorCode": "13301",
+          "hexes": ["#F74E02"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "mellow-yellow",
+          "name": "Mellow Yellow",
+          "colorCode": "13410",
+          "hexes": ["#F5DBAB"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "light-jade",
+          "name": "Light Jade",
+          "colorCode": "13510",
+          "hexes": ["#96D8AF"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "ice-blue",
+          "name": "Ice Blue",
+          "colorCode": "13610",
+          "hexes": ["#B8CDE9"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "blue",
+          "name": "Blue",
+          "colorCode": "13611",
+          "hexes": ["#0047BB"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "teal",
+          "name": "Teal",
+          "colorCode": "13612",
+          "hexes": ["#009FA1"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "purple",
+          "name": "Purple",
+          "colorCode": "13710",
+          "hexes": ["#8344B0"],
+          "colorAccuracy": "official"
+        },
+        {
+          "id": "lavender",
+          "name": "Lavender",
+          "colorCode": "13711",
+          "hexes": ["#B8ACD6"],
+          "colorAccuracy": "official"
+        }
+      ],
+      "sources": {
+        "technical": {
+          "name": "Bambu Lab PLA Translucent",
+          "url": "https://us.store.bambulab.com/en/products/pla-translucent"
+        },
+        "availability": {
+          "name": "Яндекс Маркет — Bambu Lab filament",
+          "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20PLA%20Translucent"
+        }
+      }
+    }
+  ],
+  "id": "bambu",
+  "logos": {
+    "color": "brands/bambu-lab.svg",
+    "monochrome": "brands/bambu-lab-monochrome.svg"
+  },
+  "sources": {
+    "technical": {
+      "name": "Bambu Studio — filament profiles",
+      "url": "https://github.com/bambulab/BambuStudio/tree/master/resources/profiles/BBL/filament"
+    },
+    "availability": {
+      "name": "Яндекс Маркет — Bambu Lab filament",
+      "url": "https://market.yandex.ru/search?text=Bambu%20Lab%20filament"
+    }
+  }
+}

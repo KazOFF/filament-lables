@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "catalogs": [
+    "bambu-filaments.json",
+    "creality-filaments.json",
+    "esun-filaments.json",
+    "sunlu-filaments.json",
+    "rec-filaments.json",
+    "bestfilament-filaments.json",
+    "fdplast-filaments.json",
+    "filamentarno-filaments.json"
+  ]
+}

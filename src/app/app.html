@@ -1,0 +1,116 @@
+<header class="topbar">
+  <button class="brand" type="button" (click)="activeTab.set('catalog')" aria-label="Filament Labels — каталог"><span class="brand-mark"><img src="icon.svg" alt="" /></span><span><b>Filament</b> Labels</span></button>
+  <nav aria-label="Основная навигация"><button type="button" [class.active]="activeTab() === 'catalog'" (click)="activeTab.set('catalog')">Каталог <span>{{ catalog.filaments().length }}</span></button><button type="button" [class.active]="activeTab() === 'editor'" (click)="activeTab.set('editor')">Редактор</button></nav>
+  <div class="top-actions"><button class="primary compact" type="button" (click)="newFilament()">+ Своя этикетка</button></div>
+</header>
+<main>
+  @if (activeTab() === 'editor') {
+    <section class="editor-shell">
+      <aside class="control-panel">
+        <div class="panel-intro"><p class="eyebrow">Этикетка</p><h1>Соберите свою<br><em>идеальную метку</em></h1><p>Выберите пластик, настройте данные и скачайте готовый макет.</p></div>
+        <form [formGroup]="filamentForm" class="form-stack">
+          <div class="section-title"><span>01</span><b>Основная информация</b></div>
+          <div class="grid-2">
+            <label class="field"><span>Производитель</span><input formControlName="manufacturer" /></label>
+            <label class="field"><span>Тип материала</span><select formControlName="material">@for (type of materials; track type) { <option [value]="type">{{ type }}</option> }</select></label>
+            <label class="field full"><span>Название / серия</span><input formControlName="name" placeholder="Например, PLA Basic" /></label>
+            <label class="field"><span>Название цвета</span><input formControlName="colorName" /></label>
+            <label class="field color-field"><span>Цвет</span><div><input type="color" formControlName="colorHex" /><input formControlName="colorHex" /></div></label>
+          </div>
+          <div class="logo-row"><div class="logo-preview">@if (current().logo) { <img [src]="current().logo" alt="Логотип производителя" /> } @else { <span>{{ current().manufacturer.slice(0, 1) || 'F' }}</span> }</div><div><b>Логотип производителя</b><small>SVG, PNG или JPEG · до 2 МБ</small></div><label class="upload">Загрузить<input type="file" accept=".svg,.png,.jpg,.jpeg,image/svg+xml,image/png,image/jpeg" (change)="handleLogo($event)" /></label>@if (current().logo) { <button class="icon-button" type="button" aria-label="Удалить логотип" (click)="removeLogo()">×</button> }</div>
+          <div class="section-title"><span>02</span><b>Настройки печати</b></div>
+          <div class="settings-grid" formGroupName="settings">
+            <div class="range-group"><span>Сопло, °C</span><label><input type="number" formControlName="nozzleMin" /><i>—</i><input type="number" formControlName="nozzleMax" /></label></div>
+            <div class="range-group"><span>Стол, °C</span><label><input type="number" formControlName="bedMin" /><i>—</i><input type="number" formControlName="bedMax" /></label></div>
+            <label class="field"><span>Скорость, мм/с</span><input type="number" formControlName="speed" /></label><label class="field"><span>Обдув, %</span><input type="number" formControlName="fan" /></label><label class="field"><span>Сушка, °C</span><input type="number" formControlName="dryingTemperature" /></label><label class="field"><span>Сушка, часов</span><input type="number" formControlName="dryingHours" /></label>
+          </div>
+          <p class="temporary-note">Пользовательские значения используются только для текущей этикетки и не сохраняются в каталоге.</p>
+        </form>
+      </aside>
+      <section class="workspace">
+        <div class="workspace-head"><div><p class="eyebrow">Живой предпросмотр</p><h2>{{ labelForm.controls.width.value }} × {{ labelForm.controls.height.value }} мм</h2></div><div class="zoom-pill"><span></span> Масштаб адаптирован</div></div>
+        <div class="preview-stage">
+          <div class="preview-measure" [style.aspect-ratio]="labelForm.controls.width.value + '/' + labelForm.controls.height.value" [style.--preview-max-width.px]="previewMaxWidth(330)">
+            <div class="ruler horizontal"><span>0</span><span>{{ labelForm.controls.width.value / 2 }}</span><span>{{ labelForm.controls.width.value }} мм</span></div>
+            <div class="ruler vertical"><span>0</span><span>{{ labelForm.controls.height.value / 2 }}</span><span>{{ labelForm.controls.height.value }} мм</span></div>
+            <div class="label-shadow">
+              <app-label-preview #editorPreview [filament]="current()" [options]="labelOptions()"/>
+            </div>
+          </div>
+        </div>
+        <form class="label-controls" [formGroup]="labelForm">
+          <div class="control-section dimensions"><div class="control-heading"><span>Размер этикетки</span><small>миллиметры</small></div><label>Ширина<input type="number" formControlName="width"/></label><span class="multiply">×</span><label>Высота<input type="number" formControlName="height"/></label></div>
+          <div class="control-section"><div class="control-heading"><span>Шаблон</span></div><div class="segmented"><label><input type="radio" value="light" formControlName="template"/><span>Светлый</span></label><label><input type="radio" value="dark" formControlName="template"/><span>Тёмный</span></label><label><input type="radio" value="outline" formControlName="template"/><span>Контур</span></label></div></div>
+          <div class="control-section"><div class="control-heading"><span>Режим печати</span></div><div class="segmented"><label><input type="radio" value="color" formControlName="colorMode"/><span>Цветная</span></label><label><input type="radio" value="monochrome" formControlName="colorMode"/><span>Ч/б</span></label></div></div>
+          <div class="control-section toggles"><div class="control-heading"><span>Показывать</span></div><label><input type="checkbox" formControlName="showColor"/><span>Цвет</span></label><label><input type="checkbox" formControlName="showTemperatures"/><span>Температуры</span></label><label><input type="checkbox" formControlName="showSpeed"/><span>Скорость</span></label><label><input type="checkbox" formControlName="showFan"/><span>Обдув</span></label><label><input type="checkbox" formControlName="showDrying"/><span>Сушку</span></label><label><input type="checkbox" formControlName="showCutLine"/><span>Линию обрезки</span></label></div>
+        </form>
+        <div class="export-bar"><div class="copies"><label>Копий на A4 <input type="number" min="1" max="100" [formControl]="labelForm.controls.copies"/></label></div><button type="button" class="ghost" (click)="addCustomToSheet()">На общий лист</button><button type="button" class="ghost" (click)="printLabel()">Печать</button><button type="button" class="ghost" (click)="export('svg')">SVG</button><button type="button" class="ghost" (click)="export('png')">PNG</button><button type="button" class="primary" (click)="export('pdf')">Скачать PDF</button><button type="button" class="accent" (click)="export('a4')">PDF · лист A4</button></div>
+        <p class="hint">PDF и печать используют физический размер в миллиметрах. В диалоге печати выберите масштаб 100%.</p>
+      </section>
+    </section>
+  } @else {
+    <section class="catalog-page">
+      <div class="catalog-hero"><h1>Каталог филаментов</h1></div>
+      @if (catalog.loadError()) { <div class="catalog-warning" role="alert"><b>Часть встроенного каталога недоступна.</b> {{ catalog.loadError() }}</div> }
+      <div class="catalog-toolbar">
+        <label class="search"><span>⌕</span><input placeholder="Поиск по бренду, названию, материалу, цвету или коду" [value]="search()" (input)="search.set($any($event.target).value)"/></label>
+        <label class="catalog-filter manufacturer-filter"><span>Производитель</span><select [value]="manufacturerFilter()" (change)="setManufacturerFilter($any($event.target).value)">@for (name of catalogManufacturers(); track name) { <option [value]="name">{{ name }}</option> }</select></label>
+        <label class="catalog-filter material-filter"><span>Тип пластика</span><select [value]="materialFilter()" (change)="setMaterialFilter($any($event.target).value)">@for (type of catalogMaterials(); track type) { <option [value]="type">{{ type }}</option> }</select></label>
+        <label class="catalog-filter series-filter"><span>Линейка</span><select [value]="seriesFilter()" (change)="seriesFilter.set($any($event.target).value)">@for (name of catalogSeries(); track name) { <option [value]="name">{{ name }}</option> }</select></label>
+      </div>
+      <div class="catalog-grid">@for (item of filteredFilaments(); track item.id) { <article class="filament-card"><div class="card-top"><span class="swatch" [style.background]="swatch(item)"></span><span class="material-badge">{{ item.material }}</span><span class="built-in">Встроенный</span></div><div><small>{{ item.manufacturer }}</small><h2>{{ item.name }}</h2><p>{{ colorLabel(item) }}</p></div>@if (hasCardSettings(item)) { <dl>@if (item.settings.nozzleMin !== undefined) { <div><dt>Сопло</dt><dd>{{ item.settings.nozzleMin }}–{{ item.settings.nozzleMax }}°C</dd></div> }@if (item.settings.bedMin !== undefined) { <div><dt>Стол</dt><dd>{{ item.settings.bedMin }}–{{ item.settings.bedMax }}°C</dd></div> }@if (item.settings.speed !== undefined) { <div><dt>Скорость</dt><dd>до {{ item.settings.speed }} мм/с</dd></div> }</dl> }@if (item.sources; as sources) { <div class="source-links"><a class="source-link" [href]="sources.technical.url" target="_blank" rel="noopener">Характеристики</a><a class="source-link" [href]="sources.availability.url" target="_blank" rel="noopener">Купить в России</a></div> }<div class="card-actions"><button class="sheet-card" type="button" (click)="addCatalogToSheet(item)">+ На лист</button><button class="print-card" type="button" (click)="openQuickPrint(item)">Печать</button></div></article> } @empty { <div class="empty">Ничего не найдено. Попробуйте изменить запрос.</div> }</div>
+    </section>
+  }
+</main>
+@if (sheetTotal() > 0) { <button class="sheet-fab" type="button" (click)="openSheet()">Лист · {{ sheetTotal() }}</button> }
+@if (quickTarget(); as item) {
+  <div class="modal-backdrop" (click)="closeQuickPrint()">
+    <section class="print-modal" role="dialog" aria-modal="true" aria-labelledby="quick-title" (click)="$event.stopPropagation()">
+      <div class="modal-head"><div><p class="eyebrow">Быстрая печать</p><h2 id="quick-title">{{ item.name }} · {{ colorLabel(item) }}</h2></div><button type="button" aria-label="Закрыть" (click)="closeQuickPrint()">×</button></div>
+      <div class="quick-preview"><div class="quick-label" [style.aspect-ratio]="labelForm.controls.width.value + '/' + labelForm.controls.height.value" [style.--preview-max-width.px]="previewMaxWidth(300)"><app-label-preview #quickPreview [filament]="item" [options]="labelOptions()"/></div></div>
+      <form class="quick-options" [formGroup]="labelForm">
+        <div class="quick-controls"><label>Ширина, мм<input type="number" formControlName="width"/></label><label>Высота, мм<input type="number" formControlName="height"/></label><label>Копий на A4<input type="number" formControlName="copies"/></label></div>
+        <div class="quick-customization"><div><div class="quick-heading">Шаблон</div><div class="segmented"><label><input type="radio" value="light" formControlName="template"/><span>Светлый</span></label><label><input type="radio" value="dark" formControlName="template"/><span>Тёмный</span></label><label><input type="radio" value="outline" formControlName="template"/><span>Контур</span></label></div></div><div><div class="quick-heading">Режим печати</div><div class="segmented"><label><input type="radio" value="color" formControlName="colorMode"/><span>Цветная</span></label><label><input type="radio" value="monochrome" formControlName="colorMode"/><span>Ч/б</span></label></div></div><div class="quick-toggles"><div class="quick-heading">Показывать</div><div><label><input type="checkbox" formControlName="showColor"/> Цвет</label><label><input type="checkbox" formControlName="showTemperatures"/> Температуры</label><label><input type="checkbox" formControlName="showSpeed"/> Скорость</label><label><input type="checkbox" formControlName="showFan"/> Обдув</label><label><input type="checkbox" formControlName="showDrying"/> Сушка</label><label><input type="checkbox" formControlName="showCutLine"/> Линия обрезки</label></div></div></div>
+      </form>
+      <div class="modal-actions"><button class="ghost" type="button" (click)="addCatalogToSheet(item)">+ На общий лист</button><button class="ghost" type="button" (click)="export('pdf', true)">PDF</button><button class="ghost" type="button" (click)="export('a4', true)">Лист A4</button><button class="primary" type="button" (click)="printLabel(true)">Печать</button></div>
+    </section>
+  </div>
+}
+@if (sheetOpen()) {
+  <div class="modal-backdrop" (click)="closeSheet()">
+    <section class="sheet-modal" role="dialog" aria-modal="true" aria-labelledby="sheet-title" (click)="$event.stopPropagation()">
+      <div class="modal-head"><div><p class="eyebrow">Пакетная печать</p><h2 id="sheet-title">Общий лист A4</h2><p class="sheet-summary">{{ sheetTotal() }} этикеток · {{ sheetCapacity() }} на странице · {{ sheetPages() }} стр.</p></div><button type="button" aria-label="Закрыть" (click)="closeSheet()">×</button></div>
+      <div class="sheet-content">
+        <div class="sheet-items">
+          @for (entry of sheetItems(); track entry.key) {
+            <article class="sheet-item" [class.selected]="selectedSheetItem()?.key === entry.key" (click)="selectSheetItem(entry.key)">
+              <span class="swatch" [style.background]="swatch(entry.filament)"></span>
+              <div><small>{{ entry.filament.manufacturer }} · {{ entry.filament.name }}</small><b>{{ colorLabel(entry.filament) }}</b></div>
+              <label (click)="$event.stopPropagation()">Копий<input type="number" min="1" max="100" [value]="entry.copies" (change)="setSheetCopies(entry.key, $any($event.target).value)"/></label>
+              <button type="button" aria-label="Удалить этикетку" (click)="$event.stopPropagation(); removeSheetItem(entry.key)">×</button>
+            </article>
+          } @empty { <div class="sheet-empty">Добавьте этикетки из каталога или редактора.</div> }
+        </div>
+        <div class="sheet-side">
+          @if (selectedSheetItem(); as selected) {
+            <div class="sheet-label-preview">
+              <div class="quick-heading">Предпросмотр · {{ colorLabel(selected.filament) }}</div>
+              <div class="sheet-preview-stage"><div class="sheet-preview-label" [style.aspect-ratio]="sheetForm.controls.width.value + '/' + sheetForm.controls.height.value" [style.--preview-max-width.px]="sheetPreviewMaxWidth(190)"><app-label-preview [filament]="selected.filament" [options]="sheetOptions()"/></div></div>
+            </div>
+          }
+          <form class="sheet-settings" [formGroup]="sheetForm">
+            <div><div class="quick-heading">Размер этикеток</div><div class="quick-controls sheet-size"><label>Ширина, мм<input type="number" formControlName="width"/></label><label>Высота, мм<input type="number" formControlName="height"/></label></div></div>
+            <div><div class="quick-heading">Шаблон</div><div class="segmented"><label><input type="radio" value="light" formControlName="template"/><span>Светлый</span></label><label><input type="radio" value="dark" formControlName="template"/><span>Тёмный</span></label><label><input type="radio" value="outline" formControlName="template"/><span>Контур</span></label></div></div>
+            <div><div class="quick-heading">Режим печати</div><div class="segmented"><label><input type="radio" value="color" formControlName="colorMode"/><span>Цветная</span></label><label><input type="radio" value="monochrome" formControlName="colorMode"/><span>Ч/б</span></label></div></div>
+            <div class="quick-toggles"><div class="quick-heading">Показывать</div><div><label><input type="checkbox" formControlName="showColor"/> Цвет</label><label><input type="checkbox" formControlName="showTemperatures"/> Температуры</label><label><input type="checkbox" formControlName="showSpeed"/> Скорость</label><label><input type="checkbox" formControlName="showFan"/> Обдув</label><label><input type="checkbox" formControlName="showDrying"/> Сушка</label><label><input type="checkbox" formControlName="showCutLine"/> Линия обрезки</label></div></div>
+          </form>
+        </div>
+      </div>
+      <div class="sheet-actions"><button class="text-button" type="button" (click)="clearSheet()">Очистить лист</button><span></span><button class="ghost" type="button" (click)="outputSheet('pdf')">Скачать PDF</button><button class="primary" type="button" (click)="outputSheet('print')">Печать</button></div>
+      <div class="sheet-render-bank" aria-hidden="true">
+        @for (entry of sheetItems(); track entry.key) { <div [style.width.mm]="sheetForm.controls.width.value" [style.height.mm]="sheetForm.controls.height.value"><app-label-preview #sheetPreview [filament]="entry.filament" [options]="sheetOptions()"/></div> }
+      </div>
+    </section>
+  </div>
+}
+@if (toast()) { <div class="toast" role="status">{{ toast() }}</div> }

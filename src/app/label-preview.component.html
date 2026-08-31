@@ -1,0 +1,30 @@
+<svg #svg xmlns="http://www.w3.org/2000/svg" [attr.viewBox]="'0 0 ' + options().width + ' ' + options().height" [attr.width]="options().width + 'mm'" [attr.height]="options().height + 'mm'" preserveAspectRatio="xMidYMid meet" font-family="NotoSans" role="img" aria-label="Предпросмотр этикетки">
+  <defs>
+    <linearGradient id="filament-gradient" x1="0" y1="0" x2="1" y2="0">
+      @for (hex of filament().colorHexes ?? [filament().colorHex]; track $index) { <stop [attr.offset]="($index / Math.max(1, (filament().colorHexes?.length ?? 1) - 1)) * 100 + '%'" [attr.stop-color]="hex"/> }
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" [attr.rx]="u(2.5)" [attr.fill]="bg()" [attr.stroke]="options().template === 'outline' ? '#171A17' : 'none'" [attr.stroke-width]="u(.6)"/>
+  @if (!isMonochrome()) { <rect [attr.width]="u(5)" height="100%" [attr.fill]="colorFill()"/> }
+  @if (logoSource(); as logo) { <image [attr.href]="logo" [attr.x]="u(9)" [attr.y]="u(7)" [attr.width]="u(12)" [attr.height]="u(9)" preserveAspectRatio="xMidYMid meet"/> }
+  @else { <rect [attr.x]="u(9)" [attr.y]="u(7)" [attr.width]="u(10)" [attr.height]="u(9)" [attr.rx]="u(1.5)" [attr.fill]="accent()" stroke="#172018" stroke-opacity=".14" [attr.stroke-width]="u(.3)"/><text [attr.x]="u(14)" [attr.y]="u(13.4)" text-anchor="middle" font-family="NotoSans" [attr.font-size]="fu(4.3)" font-weight="700" [attr.fill]="accentText()">{{ filament().manufacturer.slice(0,1) }}</text> }
+  <text [attr.x]="u(23)" [attr.y]="manufacturerY()" font-family="NotoSans" [attr.font-size]="fu(2.3)" font-weight="700" [attr.letter-spacing]="u(.4)" [attr.fill]="muted()">{{ filament().manufacturer.toUpperCase() }}</text>
+  <text [attr.x]="u(23)" [attr.y]="u(16)" font-family="NotoSans" [attr.font-size]="materialFontSize()" font-weight="700" [attr.fill]="fg()">{{ filament().material }}</text>
+  <line [attr.x1]="u(9)" [attr.y1]="u(19)" [attr.x2]="options().width - u(7)" [attr.y2]="u(19)" [attr.stroke]="options().template === 'dark' ? '#313831' : '#D9DED8'" [attr.stroke-width]="u(.4)"/>
+  <text [attr.x]="u(9)" [attr.y]="u(25.2)" font-family="NotoSans" [attr.font-size]="seriesFontSize()" font-weight="700" [attr.fill]="fg()">{{ filament().name }}</text>
+  @if (options().showColor) {
+    @if (!isMonochrome()) { <circle [attr.cx]="u(10.5)" [attr.cy]="u(30.3)" [attr.r]="u(1.5)" [attr.fill]="colorFill()" stroke="#333" stroke-opacity=".25" [attr.stroke-width]="u(.35)"/> }
+    <text [attr.x]="colorTextX()" [attr.y]="u(31.2)" font-family="NotoSans" [attr.font-size]="colorFontSize()" [attr.fill]="muted()">{{ colorLabel() }}</text>
+  }
+  <g>
+    @for (row of parameterRows(); track $index; let rowIndex = $index) {
+      @for (parameter of row; track parameter.id; let parameterIndex = $index) {
+        <text [attr.x]="parameterX(parameterIndex, row.length)" [attr.y]="parameterLabelY(rowIndex, parameterRows().length)" font-family="NotoSans" [attr.font-size]="fu(1.7)" font-weight="700" [attr.fill]="muted()">{{ parameter.label }}</text>
+        <text [attr.x]="parameterX(parameterIndex, row.length)" [attr.y]="parameterValueY(rowIndex, parameterRows().length)" font-family="NotoSans" [attr.font-size]="fu(2.7)" font-weight="700" [attr.fill]="fg()">{{ parameter.value }}</text>
+      }
+    }
+  </g>
+  @if (options().showCutLine) {
+    <rect x="0" y="0" [attr.width]="options().width" [attr.height]="options().height" fill="none" [attr.stroke]="options().template === 'dark' ? '#F2F4EF' : '#5E665E'" stroke-width=".25" stroke-dasharray="2 1.2" stroke-linecap="round" pointer-events="none"/>
+  }
+</svg>

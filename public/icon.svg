@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Filament Labels">
+  <rect width="512" height="512" fill="#172018"/>
+  <path d="M104 150h211l99 106-99 106H104c-14 0-26-12-26-26V176c0-14 12-26 26-26Z" fill="#A9FF74"/>
+  <circle cx="337" cy="256" r="17" fill="#172018"/>
+  <path d="M139 194h98v31h-59v25h51v31h-51v51h-39V194Zm112 0h39v107h62v31H251V194Z" fill="#172018"/>
+</svg>
